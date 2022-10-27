@@ -16,13 +16,6 @@ def create_user_item(db: Session, item: schemas.ItemCreate, business_id: int):
     db.refresh(db_item)
     return db_item
 
-
-
-
-
-
-
-
 def get_business(db: Session, id: int):
     return db.query(models.Business).filter(models.Business.id == id).first()
 
